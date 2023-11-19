@@ -1,4 +1,11 @@
-action content
+<div id="object_lists" hx-get="/reactive/" hx-swap="innerHTML" hx-target="#object_lists" hx-trigger="load">
+</div>
 
+<form hx-triger="submit" hx-target="#object_lists" hx-post="/reactive/">
+  {% csrf_token %}
+  <button class="btn btn-primary" type="submit">
+    ADD
+  </button>
+</form>
 {% include 'home/components/aside.html' %}
 
