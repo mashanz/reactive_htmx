@@ -1,0 +1,43 @@
+<aside id="aside" hx-swap-oob="true" class="h-screen w-96 border p-4">
+  <section class="font-bold text-xl">Some Random Menus</section>
+  <section class="mt-4">
+    <ul class="menu bg-base-200 w-full">
+      <li
+        hx-get="/contents?q=dashboard"
+        hx-swap="innerHTML"
+        hx-target="#content"
+        {% if MENU == 'dashboard' %}
+          class="bg-blue-500 hover:bg-blue-400 text-white p-2"
+        {% else %}
+          class="hover:bg-base-100 p-2"
+        {% endif %}
+      >
+        🏠 Dashboard
+      </li>
+      <li
+        hx-get="/contents?q=tickets"
+        hx-swap="innerHTML"
+        hx-target="#content"
+        {% if MENU == 'tickets' %}
+          class="bg-blue-500 hover:bg-blue-400 text-white p-2"
+        {% else %}
+          class="hover:bg-base-100 p-2"
+        {% endif %}
+      >
+        🎫 Tickets
+      </li>
+      <li
+        hx-get="/contents?q=actions"
+        hx-swap="innerHTML"
+        hx-target="#content"
+        {% if MENU == 'actions' %}
+          class="bg-blue-500 hover:bg-blue-400 text-white p-2"
+        {% else %}
+          class="hover:bg-base-100 p-2"
+        {% endif %}
+      >
+        🧪 Actions
+      </li>
+    </ul>
+  </section>
+</aside>
