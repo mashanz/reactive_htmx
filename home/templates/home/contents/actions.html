@@ -1,11 +1,9 @@
-<div id="object_lists" hx-get="/reactive/" hx-swap="innerHTML" hx-target="#object_lists" hx-trigger="load">
+<div class="flex flex-col gap-4" id="object_lists" hx-get="/reactive/" hx-swap="innerHTML" hx-target="#object_lists" hx-trigger="load">
 </div>
 
-<form hx-triger="submit" hx-target="#object_lists" hx-post="/reactive/">
-  {% csrf_token %}
-  <button class="btn btn-primary" type="submit">
-    ADD
-  </button>
-</form>
+<button class="btn btn-outline btn-primary w-full mt-4" hx-target="#object_lists" hx-get="/reactive/add/">
+  ADD
+</button>
+
 {% include 'home/components/aside.html' %}
 
