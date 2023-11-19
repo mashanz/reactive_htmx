@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "reactive-htmx"
+version = "0.1.0"
+description = "Reactive HTMX"
+authors = ["mashanz <email@mashanz.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^4.2.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
